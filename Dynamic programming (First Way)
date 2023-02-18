@@ -1,0 +1,11 @@
+a = [0]*50 # 50 It's just any number, it's important that it is greater than the final value
+
+a[1] = 1
+
+for i in range(2, 50): # 2 It's started value+1. 
+    a[i] = a[i-1]
+    if i % 2 == 0:
+        a[i] += a[i // 2]
+    a[17] = 0 # 17 is the value we need to avoid
+
+print( a[10] ) # 10 is final value
