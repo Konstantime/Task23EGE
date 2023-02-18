@@ -1,0 +1,9 @@
+def f(l_from, l_to):
+    if( l_from > l_to or l_from == 17 ):
+        return 0
+    if( l_from == l_to ):
+        return 1
+    if( l_from < l_to ):
+        return f( l_from + 1, l_to ) + f( l_from*2, l_to )
+
+print( f(1, 10) * f(10,35) )
